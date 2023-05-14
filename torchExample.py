@@ -22,3 +22,14 @@ b = torch.Tensor( [2,3,4])
 
 print(a.cross(b))
 
+
+class TinyModel( torch.nn.Module):
+    def __init__(self):
+        super(TinyModel, self).__init__()
+
+        self.linear1 = torch.nn.Linear(100,200)
+        self.activation = torch.nn.ReLU()
+
+tm = TinyModel()
+
+print(tm)
